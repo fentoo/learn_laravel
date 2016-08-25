@@ -26,12 +26,17 @@ class Handler extends ExceptionHandler
      * Report or log an exception.
      *
      * This is a great spot to send exceptions to Sentry, Bugsnag, etc.
-     *
+     * (Use to log exceptions or send them to an external service like Bugsnag or Sentry.)
      * @param  \Exception  $exception
      * @return void
      */
     public function report(Exception $exception)
     {
+        // You can use instanceof operator to handle specified exception
+        /* if ($exception instanceof Exception) {
+            // Do something
+        } */
+
         parent::report($exception);
     }
 
